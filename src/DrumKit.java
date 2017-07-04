@@ -28,21 +28,21 @@ public class DrumKit extends MouseAdapter {
 		// 1. Make a JFrame variable and initialize it using "new JFrame()"
 		JFrame frame = new JFrame();
 		JPanel panel = new JPanel();
-		JPanel panelTwo=new JPanel();
+		
 
 		// 2. Make the frame visible
 		frame.setVisible(true);
 
 		// 3. Set the size of the frame
-		frame.setSize(500, 500);
+		frame.setSize(100, 100);
 		// 4. Set the title of the frame
 		frame.setTitle("drumkit");
 		// 5. Make a JPanel and initialize it.
 
 		// 6. Add the panel to the frame. (The panel is invisible.)
 		frame.add(panel);
-		frame.add(panelTwo);
-		//panel.setSize(100,100);
+		
+		panel.setSize(100,100);
 		//panelTwo.setSize(100,100);
 		
 		// 7. Download an image of a drum from the Internet. Drop it into your Eclipse project under "default package".
@@ -55,12 +55,13 @@ public class DrumKit extends MouseAdapter {
 		drumLabelWithImageTwo= createLabelImage(drumTwo);
 		// 10. Add the image to the panel
 		panel.add(drumLabelWithImage);
+		panel.add(drumLabelWithImageTwo);
+
 		panel.setVisible(true);
-		panelTwo.add(drumLabelWithImageTwo);
-		panelTwo.setVisible(true);
+		
 		// 11. Set the layout of the panel to "new GridLayout()"
 		panel.setLayout(new GridLayout());
-		panelTwo.setLayout(new GridLayout());
+		
 		// 12. call the pack() method on the frame
 		frame.pack();
 		// 13. add a mouse listener to drumLabelWithImage.
@@ -76,12 +77,16 @@ public class DrumKit extends MouseAdapter {
 		// download it, log in as leagueofamazing/code4life.
 
 		if(drumClicked.equals(drumLabelWithImage)){
-				String sound = "sound.wav";
+				String sound = "sound2.wav";
 		playSound(sound);
+		System.out.println("left Button Clicked!");
 		}else{
-			String soundTwo = "260881__trautwein__cat-purr.wav";
+			String soundTwo = "sound3.wav";
 			playSound(soundTwo);
+		System.out.println("right Button clicked!");
 		}
+		
+	
 
 		// 17. ...use the playSound method to play a drum sound.
 
