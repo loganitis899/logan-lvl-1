@@ -47,28 +47,42 @@ public class Jeopardy implements ActionListener {
 		frame.setLayout(new BorderLayout());
 
 		// 1. Make the frame show up
+		
 		frame.setVisible(true);
 		// 2. Give your frame a title
+		
 		frame.setTitle("GAME SHOW");
+		
 		// 3. Create a JPanel variable to hold the header using the createHeader method
+		
 		JPanel header = createHeader("quiz show");
+		
 		// 4. Add the header component to the quizPanel
+		
 		quizPanel.add(header);
+		
 		// 5. Add the quizPanel to the frame
 		frame.add(quizPanel);
+		
 
 		// 6. Use the createButton method to set the value of firstButton
 		firstButton = createButton("500");
+		
 		// 7. Add the firstButton to the quizPanel
 		quizPanel.add(firstButton);
 		
+
 		// 9. Use the secondButton variable to hold a button using the createButton method
-secondButton=createButton("100");
+		secondButton = createButton("100");
+		
 		// 10. Add the secondButton to the quizPanel
-quizPanel.add(secondButton);
+		quizPanel.add(secondButton);
+		
 		// 11. Add action listeners to the buttons (2 lines of code)
-firstButton.addActionListener(this);
-secondButton.addActionListener(this);
+		firstButton.addActionListener(this);
+		
+		secondButton.addActionListener(this);
+		
 		// 12. Fill in the actionPerformed() method below
 
 		frame.pack();
@@ -76,23 +90,30 @@ secondButton.addActionListener(this);
 		frame.add(makeScorePanel(), BorderLayout.NORTH);
 		frame.setSize(Toolkit.getDefaultToolkit().getScreenSize().height, Toolkit.getDefaultToolkit().getScreenSize().width);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	
 	}
 
-	/*
-	 * 13. Use the method provided to play the Jeopardy theme music
-	 * 
-	 * 14. Add buttons so that you have $200, $400, $600, $800 and $1000 questions
-	 *
-	 * [optional] Use the showImage or playSound methods when the user answers a question
-	 */
+	
+	 // 13. Use the method provided to play the Jeopardy theme music
+
+	
+	 //14. Add buttons so that you have $200, $400, $600, $800 and $1000 questions
+	 
+	 //[optional] Use the showImage or playSound methods when the user answers a question
+	 
 
 	private JButton createButton(String dollarAmount) {
 		// Create a new JButton
 		JButton method = new JButton();
+		
 		// Set the text of the button to the dollarAmount
+		
 		method.setText(dollarAmount);
+		
 		// Increment the buttonCount (this should make the layout vertical)
-buttonCount=buttonCount+1;
+		
+		buttonCount = buttonCount + 1;
+		
 		// Return your new button instead of the temporary button
 
 		return method;
@@ -100,15 +121,16 @@ buttonCount=buttonCount+1;
 
 	public void actionPerformed(ActionEvent arg0) {
 		// Remove this temporary message:
-		
-
+		playJeopardyTheme();
 		// Use the method that plays the jeopardy theme music.
-playJeopardyTheme();
+	
 		JButton buttonPressed = (JButton) arg0.getSource();
 		// If the buttonPressed was the firstButton
-if(buttonPressed.equals(firstButton)){
-	askQuestion("what what is the american revolution called in england?", "american Revolt",500);
-}
+		if (buttonPressed.equals(firstButton)) {
+			askQuestion("what what is the american revolution called in england?", "american revolt", 500);
+		} else if{
+			
+		}
 		// Call the askQuestion() method
 
 		// Fill in the askQuestion() method. When you play the game, the score should change.
@@ -122,17 +144,29 @@ if(buttonPressed.equals(firstButton)){
 	}
 
 	private void askQuestion(String question, String correctAnswer, int prizeMoney) {
-		// Remove this temporary message
 		
-		// Use a pop up to ask the user the question
-String answer=JOptionPane.showInputDialog(null, question);
-		// If the answer is correct
+		// Remove this temporary message
 
+		// Use a pop up to ask the user the question
+		
+		String answer = JOptionPane.showInputDialog(null, question);
+		
+		// If the answer is correct
+if(answer.equals(correctAnswer)){
+	score = score + prizeMoney;
+	updateScore();
+	JOptionPane.showMessageDialog(null, "COOOOORECT!");
+} else{
+	score = score - prizeMoney;
+	JOptionPane.showMessageDialog(null, "wrong!! the correct answer is "+ correctAnswer);
+	updateScore();
+}
 		// Increase the score by the prizeMoney
 
 		// Call the updateScore() method
 
 		// Pop up a message to tell the user they were correct
+
 
 		// Otherwise
 
@@ -156,7 +190,7 @@ String answer=JOptionPane.showInputDialog(null, question);
 	}
 
 	private void playSound(String fileName) {
-		AudioClip scream = JApplet.newAudioClip(getClass().getResource(fileName));
+the		AudioClip scream = JApplet.newAudioClip(getClass().getResource(fileName));
 		scream.play();
 	}
 
