@@ -10,7 +10,7 @@ public class netflixPlayer {
 	//1. Instantiate some Movie objects (at least 5).
 		
 			//2. Use the Movie class to get the ticket price of one of your movies.
-kingsmen.getTicketPrice();
+System.out.println(kingsmen.getTicketPrice());
 pacificRim.getTicketPrice();
 suicideSquad.getTicketPrice();
 inception.getTicketPrice();
