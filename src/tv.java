@@ -48,7 +48,7 @@ public class tv implements ActionListener {
 
 	void playVideo(String videoID) {
 		try {
-			URI uri = new URI("https://www.youtube.com/ + videoID );
+			URI uri = new URI("https://www.youtube.com/ + videoID ");
 			java.awt.Desktop.getDesktop().browse(uri);
 		} catch (Exception e) {
 			e.printStackTrace();

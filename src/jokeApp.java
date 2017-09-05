@@ -20,8 +20,7 @@ public class jokeApp {
 		frame.add(bat);
 		frame.add(jeff);
 
-		bat.addActionListener(this);
-
+		
 	}
 
 }
