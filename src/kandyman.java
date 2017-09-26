@@ -33,14 +33,15 @@ public void run() {
 }
 @Override
 public void actionPerformed(ActionEvent e) {
-	if(i<5) {
-showPictureFromTheInternet("http://www.scaryforkids.com/pics/candy-from-strangers.jpg");
+	if(i==4) {
+showPictureFromTheInternet("https://f4.bcbits.com/img/a0857045674_5.jpg");
 playSound(0);
+i=0;
 
 	} else {
 		playSound(1);
-		i=0;
 	}
+	
 	i=i+1;
 }
 private void showPictureFromTheInternet(String imageUrl) {
