@@ -37,19 +37,17 @@ JButton twentythree = new JButton();
 JButton twentyfour = new JButton();
 
 int w;
+int hit;
+Date timeAtStart = new Date();
 
 public static void main(String[] args) {
 	whack whack = new whack();
-	
-	Random rand = new Random();
-	int  n = rand.nextInt(24)+1;
-	whack.draw(n);
-	System.out.println(n);
-}
-public void draw(int n) {
+	whack.run();
+	whack.draw();
 
 	
-	f.setVisible(true);
+}
+public void run() {
 	f.add(p);
 	p.add(one);
 	p.add(two);
@@ -101,6 +99,12 @@ public void draw(int n) {
 	twentythree.addActionListener(this);
 	twentyfour.addActionListener(this);
 	
+}
+public void draw() {
+	Random rand = new Random();
+	int  n = rand.nextInt(25)+1;
+	System.out.println(n);
+	
 	one.setText("Dont click me");
 	two.setText("Dont click me");
 	three.setText("Dont click me");
@@ -127,7 +131,8 @@ public void draw(int n) {
 	twentyfour.setText("Dont click me");
 	
 	f.setSize(300, 400);
-	
+	f.setVisible(true);
+
 	switch(n) {
 	case 1:
 		one.setText("Click me     ");
@@ -151,7 +156,7 @@ public void draw(int n) {
 		seven.setText("Click me     ");
 		break;
 	case 8:
-		eight.setText("Click me    ");
+		eight.setText("Click me     ");
 		break;
 	case 9:
 		nine.setText("Click me     ");
@@ -218,24 +223,36 @@ e.printStackTrace();
 }
 private void endGame(Date timeAtStart, int molesWhacked) {
 Date timeAtEnd = new Date();
+
 JOptionPane.showMessageDialog(null, "Your whack rate is "
 + ((timeAtEnd.getTime() - timeAtStart.getTime()) / 1000.00 / molesWhacked) + " moles per second.");
+System.exit(0);
 }
 
 
 
 @Override
 public void actionPerformed(ActionEvent e) {	
-	Random rand = new Random();
-	int  j = rand.nextInt(24)+1;
-	f.dispose();
-	draw(j);
-	
-	 w=w+1;
-	 if(w==10) {
-		 endGame(dateTimeNow,10);
-	 }
+	JButton BP = (JButton)e.getSource();
+	if(BP.getText().equals("Click me     ")) {
+		hit=hit+1;
+		System.out.println("hit="+hit);
+
+	} else {
+		speak("You wee ay ah boo egg!");
 	}
+	
+	f.dispose();
+	draw();
+	
+	
+	w=w+1;
+	System.out.println("w="+w);
+	 if(w==10) {
+		 endGame(timeAtStart,hit);
+	 
+	}
+}
 	
 }
 
