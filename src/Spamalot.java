@@ -19,8 +19,8 @@ JPanel p = new JPanel();
 JButton b1 = new JButton();
 JButton b2 = new JButton();
 JTextField jt = new JTextField(15);
-static final String FAKE_USERNAME = "cymothia.exigual6666@gmail.com";
-static final String FAKE_PASSWORD = "noodle666";
+static final String FAKE_USERNAME = "uneverknow1234567@gmail.com";
+static final String FAKE_PASSWORD = "nagol123";
 
 
 public static void main(String[] args) {
@@ -83,7 +83,7 @@ return false;
 public void actionPerformed(ActionEvent e) {
 	String jtext = jt.getText();
 	for(int i=0; i<40; i++) {
-	sendSpam(jtext, "L00K THiS UP",  "cymothoa exigua!!");
+	sendSpam(jtext, "its me",  "i t0lD u sO");
 	}
 }
 
