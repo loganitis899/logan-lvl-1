@@ -135,22 +135,22 @@ public void draw() {
 
 	switch(n) {
 	case 1:
-		one.setText("Click me     ");
+		one.setText("Click me    ");
 		break;
 	case 2:
-		two.setText("Click me     ");
+		two.setText("Click me    ");
 		break;
 	case 3:
-		three.setText("Click me     ");
+		three.setText("Click me    ");
 		break;
 	case 4:
-		four.setText("Click me     ");
+		four.setText("Click me    ");
 		break;
 	case 5:
-		five.setText("Click me     ");
+		five.setText("Click me    ");
 		break;
 	case 6:
-		six.setText("Click me     ");
+		six.setText("Click me    ");
 		break;
 	case 7:
 		seven.setText("Click me     ");

@@ -19,17 +19,23 @@ public class SpellingBee {
 	 * that you need to write code in is the stuffForYouToDo() Method
 	 */
 	public void stuffForYouToDo() {
-		String one =randomWord();
-		Speak(one);
-		System.out.println(one);
+		
 
-		String word = JOptionPane.showInputDialog("spell it hear");
-		if(word.equals(one)) {
-			 one =randomWord();
+		for(int i=0; i<100; i++) {
+			String one =randomWord();
 			Speak(one);
 			System.out.println(one);
-			 word = JOptionPane.showInputDialog("spell it hear");
+			String word = JOptionPane.showInputDialog("spell it hear");
+		if(word.equals(one)) {
+			 Speak("ur correcc");
+			
+
 			 
+		}
+		else {
+			Speak("your a loser");
+			System.exit(0);
+		}
 		}
 	}
 
