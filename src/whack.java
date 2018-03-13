@@ -135,76 +135,76 @@ public void draw() {
 
 	switch(n) {
 	case 1:
-		one.setText("Click me    ");
+		one.setText("    Click me    ");
 		break;
 	case 2:
-		two.setText("Click me    ");
+		two.setText("    Click me    ");
 		break;
 	case 3:
-		three.setText("Click me    ");
+		three.setText("    Click me    ");
 		break;
 	case 4:
-		four.setText("Click me    ");
+		four.setText("    Click me    ");
 		break;
-	case 5:
-		five.setText("Click me    ");
+	case 5: 
+		five.setText("    Click me    ");
 		break;
 	case 6:
-		six.setText("Click me    ");
+		six.setText("    Click me    ");
 		break;
 	case 7:
-		seven.setText("Click me     ");
+		seven.setText("    Click me     ");
 		break;
-	case 8:
-		eight.setText("Click me     ");
+	case 8: 
+		eight.setText("    Click me     ");
 		break;
 	case 9:
-		nine.setText("Click me     ");
+		nine.setText("    Click me     ");
 		break;
 	case 10:
-		ten.setText("Click me     ");
+		ten.setText("    Click me     ");
 		break;
 	case 11:
-		eleven.setText("Click me     ");
+		eleven.setText("    Click me     ");
 		break;
 	case 12:
-		twelve.setText("Click me     ");
-		break;
+		twelve.setText("    Click me     ");
+		break; 
 	case 13:
-		thirteen.setText("Click me     ");
+		thirteen.setText("    Click me     ");
 		break;
 	case 14:
-		fourteen.setText("Click me     ");
+		fourteen.setText("    Click me     ");
 		break;
 	case 15:
-		fifteen.setText("Click me     ");
+		fifteen.setText("    Click me     ");
 		break;
 	case 16:
-		sixteen.setText("Click me     ");
+		sixteen.setText("    Click me     ");
 		break;
 	case 17:
-		seventeen.setText("Click me     ");
+		seventeen.setText("    Click me     ");
 		break;
 	case 18:
-		eighteen.setText("Click me     ");
+		eighteen.setText("    Click me     ");
 		break;
 	case 19:
-		nineteen.setText("Click me     ");
+		nineteen.setText("    Click me     ");
 		break;
-	case 20:
-		twenty.setText("Click me     ");
+	case 20: 
+		twenty.setText("    Click me     ");
 		break;
 	case 21:
-		twentyone.setText("Click me     ");
+		twentyone.setText("    Click me     ");
 		break;
 	case 22:
-		twentytwo.setText("Click me     ");
+		twentytwo.setText("    Click me     ");
 		break;
 	case 23:
-		twentythree.setText("Click me     ");
+		twentythree.setText("    Click me     ");
 		break; 
 	case 24:
-		twentyfour.setText("Click me     ");
+		twentyfour.setText("    Click me     ");
 		break;
 	
 		
